@@ -50,30 +50,31 @@
             <div>
                 Product information description why its the best product ever
                 <br/>
-                <a href="#" class="productitem">Add to Cart</a>
+                <a href="#" class="productitem" data-name="iPhone" data-price="50000" data-id="1">Add to Cart</a>
             </div>
         </div>
     </main>
 
 </body>
     <!-- Latest compiled and minified JQuery, needed for Bootstrap functionality. Must be before Bootstrap. -->
-    <script
-        src="http://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".productitem").click(function(e) {
+                e.preventDefault();
+                console.log($(this));
+            })
+        });
 
+    </script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous">
     </script>
     <script>
-        $(document).ready(function () {
-            $("productitem").click(function(e) {
-                e.preventDefault();
-                console.log("item clicked");
-            })
-        })
+
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
