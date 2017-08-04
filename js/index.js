@@ -1,13 +1,14 @@
 $(document).ready(function () {
 
-    /*var chartData = [];
+    var shopcart = [];
 
-    d3.csv('garbage.csv', function(data) {
-        //console.log(data);
+    $(".productitem").click(function (e) {
+        e.preventDefault();
+
+        var iteminfo = $(this.dataset)[0];
+        iteminfo.qty = 1;
+
+        shopcart.push(iteminfo);
+        console.log(shopcart);
     });
-
-    $.getJSON('user_sample.json')
-        .done(function(data) {
-            chartData = data;
-        });*/
 });
