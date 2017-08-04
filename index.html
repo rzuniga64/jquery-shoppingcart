@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="d3.min.js"></script>
 </head>
 <body>
 
@@ -45,14 +46,60 @@
     </nav>
 
     <main class="container-fluid">
-        <div>
-            <img src="http://via.placeholder.com/350x150">
+        <div class="item"><h4>iPhone</h4>
+            <img src="http://via.placeholder.com/350x150" class="img-responsive">
             <div>
                 Product information description why its the best product ever
                 <br/>
-                <a href="#" class="productitem" data-name="iPhone" data-price="50000" data-id="1">Add to Cart</a>
+                <a href="#" class="productitem" data-name="iPhone" data-s="black" data-price="50000" data-id="1">Add to Cart</a>
             </div>
         </div>
+
+        <div class="item"><h4>iPad</h4>
+            <img src="http://via.placeholder.com/350x150" class="img-responsive">
+            <div>
+                Product information description why its the best product ever
+                <br/>
+                <a href="#" class="productitem" data-name="iPad" data-s="white" data-price="30000" data-id="2">Add to Cart</a>
+            </div>
+        </div>
+
+        <div class="item"><h4>Cable 3</h4>
+            <img src="http://via.placeholder.com/350x150" class="img-responsive">
+            <div>
+                Product information description why its the best product ever
+                <br/>
+                <a href="#" class="productitem" data-name="Cable 3" data-s="3" data-price="1200" data-id="3">Add to Cart</a>
+            </div>
+        </div>
+
+        <div class="item"><h4>SD Card 32GB</h4>
+            <img src="http://via.placeholder.com/350x150" class="img-responsive">
+            <div>
+                Product information description why its the best product ever
+                <br/>
+                <a href="#" class="productitem" data-name="SD Card" data-s="32GB" data-price="3000" data-id="4">Add to Cart</a>
+            </div>
+        </div>
+
+        <div class="item"><h4>SD Card 16GB</h4>
+            <img src="http://via.placeholder.com/350x150" class="img-responsive">
+            <div>
+                Product information description why its the best product ever
+                <br/>
+                <a href="#" class="productitem" data-name="SD Card" data-s="16GB" data-price="2000" data-id="4">Add to Cart</a>
+            </div>
+        </div>
+
+        <div class="item"><h4>SD Card 4GB</h4>
+            <img src="http://via.placeholder.com/350x150" class="img-responsive">
+            <div>
+                Product information description why its the best product ever
+                <br/>
+                <a href="#" class="productitem" data-name="SD Card" data-s="4GB" data-price="1000" data-id="4">Add to Cart</a>
+            </div>
+        </div>
+
     </main>
 
 </body>
@@ -61,20 +108,18 @@
     <script src="./js/index.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $(".productitem").click(function(e) {
+            $(".productitem").click(function (e) {
                 e.preventDefault();
-                console.log($(this));
-            })
-        });
 
+                var iteminfo = $(this.dataset)[0];
+                console.log($(iteminfo.name));
+            });
+        })
     </script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous">
-    </script>
-    <script>
-
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
